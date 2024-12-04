@@ -2,7 +2,7 @@
 
 import Ziyadah from './ziyadah.model.js'
 
-export const addProgress = async (req, res) => {
+export const upsertProgress = async (req, res) => {
     const { module, section, progress } = req.body;
     const userId = req.user; // This comes from the authenticate middleware
 
@@ -12,12 +12,11 @@ export const addProgress = async (req, res) => {
 
     try {
         const newZiyadah = await Ziyadah.findOneAndUpdate(
-            { user: userId, module, section },
-            { $set: { progress } },
-            { new: true, upsert: true }
+            { user: userId, module, section }, // Find by user, module, and section
+            { $set: { progress } },            // Update progress
+            { new: true, upsert: true }        // Return the updated document, or create it
         );
 
-        await newZiyadah.save();
         res.status(200).json({
             msg: 'Successfully add new ziyadah progress',
             newZiyadah

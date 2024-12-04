@@ -1,10 +1,11 @@
 // ziyadah.routes.js
 
 import express from 'express'
-import { addProgress } from './ziyadah.controller.js'
+import { upsertProgress } from './ziyadah.controller.js'
 import { authenticate } from '../../../middlewares/auth.middleware.js'
+import { validateZiyadah } from '../../../middlewares/ziyadah.middleware.js'
 const router = express.Router()
 
-router.post('/add-progress', authenticate, addProgress)
+router.post('/progress', authenticate, validateZiyadah, upsertProgress)
 
 export default router
