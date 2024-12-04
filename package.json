@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "name": "be-hifz-hub",
+  "version": "1.0.0",
+  "description": "A robust backend for **Hifz Hub**, a web app designed to assist Muslims in memorizing and reviewing Tuhfatul Athfal, Jazariyyah, and other Islamic texts. This backend serves as the foundation for features such as user authentication, Muroja'ah (review), Ziyadah (new memorization), and quizzes. 🚀",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.3"
+  }
+}
