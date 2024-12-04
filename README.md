@@ -1,7 +1,3 @@
-Here’s a sample `README.md` for the **Hifz Hub** backend project:
-
----
-
 # 🕌 **Hifz Hub Backend**  
 A robust backend for **Hifz Hub**, a web app designed to assist Muslims in memorizing and reviewing Tuhfatul Athfal, Jazariyyah, and other Islamic texts. This backend serves as the foundation for features such as user authentication, Muroja'ah (review), Ziyadah (new memorization), and quizzes. 🚀  
 
