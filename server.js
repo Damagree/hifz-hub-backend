@@ -16,4 +16,7 @@ app.use('/api/auth', authRoutes)
 import murojaahRoutes from './src/modules/murojaah/murojaah.routes.js';
 app.use('/api/murojaah', murojaahRoutes)
 
+import ziyadahRoutes from './src/modules/ziyadah/ziyadah.routes.js'
+app.use('/api/ziyadah', ziyadahRoutes)
+
 app.listen(process.env.LISTEN_PORT, () => console.log(`Server running on port: ${process.env.LISTEN_PORT}`))
